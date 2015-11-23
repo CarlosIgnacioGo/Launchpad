@@ -5,6 +5,7 @@
  */
 package launchpadcontroller;
 
+import java.awt.event.*;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
@@ -19,7 +20,10 @@ public class LaunchPadMain extends javax.swing.JFrame {
     
     public LaunchPadMain() {
         initComponents();
+        Evento tecla = new Evento();
+        addKeyListener(tecla);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,6 +39,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("jButton1");
+        jButton1.setFocusable(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -46,21 +51,50 @@ public class LaunchPadMain extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(182, Short.MAX_VALUE)
+                .addContainerGap(169, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(142, 142, 142))
+                .addGap(155, 155, 155))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addGap(60, 60, 60)
                 .addComponent(jButton1)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        play("kick");
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    
+        
+    class Evento implements KeyListener{
+
+        @Override
+        public void keyTyped(KeyEvent e) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            int codigo = e.getKeyCode();
+            System.out.println(codigo);
+            if (codigo == 49) {
+                play("kick");
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+        
+    }
+    
     public void play(String archivo){
         try{
            clip = AudioSystem.getClip();
@@ -70,11 +104,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             
         }   
     }
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        play("kick");
-    }//GEN-LAST:event_jButton1ActionPerformed
-    
+        
    
     /**
      * @param args the command line arguments
@@ -110,6 +140,8 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
