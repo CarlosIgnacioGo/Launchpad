@@ -34,41 +34,314 @@ public class LaunchPadMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        Pad1 = new javax.swing.JButton();
+        Pad2 = new javax.swing.JButton();
+        Pad3 = new javax.swing.JButton();
+        Pad4 = new javax.swing.JButton();
+        Pad5 = new javax.swing.JButton();
+        Pad6 = new javax.swing.JButton();
+        Pad7 = new javax.swing.JButton();
+        Pad8 = new javax.swing.JButton();
+        Pad9 = new javax.swing.JButton();
+        Pad10 = new javax.swing.JButton();
+        Pad11 = new javax.swing.JButton();
+        Pad12 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("jButton1");
-        jButton1.setFocusable(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Pad1.setDefaultCapable(false);
+        Pad1.setFocusable(false);
+        Pad1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Pad1ActionPerformed(evt);
             }
         });
+
+        Pad2.setFocusable(false);
+        Pad2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad2ActionPerformed(evt);
+            }
+        });
+
+        Pad3.setFocusable(false);
+        Pad3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad3ActionPerformed(evt);
+            }
+        });
+
+        Pad4.setFocusable(false);
+        Pad4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad4ActionPerformed(evt);
+            }
+        });
+
+        Pad5.setFocusable(false);
+        Pad5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad5ActionPerformed(evt);
+            }
+        });
+
+        Pad6.setFocusable(false);
+        Pad6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad6ActionPerformed(evt);
+            }
+        });
+
+        Pad7.setFocusable(false);
+        Pad7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad7ActionPerformed(evt);
+            }
+        });
+
+        Pad8.setFocusable(false);
+        Pad8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad8ActionPerformed(evt);
+            }
+        });
+
+        Pad9.setFocusable(false);
+        Pad9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad9ActionPerformed(evt);
+            }
+        });
+
+        Pad10.setFocusable(false);
+        Pad10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad10ActionPerformed(evt);
+            }
+        });
+
+        Pad11.setFocusable(false);
+        Pad11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad11ActionPerformed(evt);
+            }
+        });
+
+        Pad12.setFocusable(false);
+        Pad12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pad12ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("1");
+
+        jLabel2.setText("2");
+
+        jLabel3.setText("3");
+
+        jLabel4.setText("4");
+
+        jLabel5.setText("5");
+
+        jLabel6.setText("6");
+
+        jLabel7.setText("7");
+
+        jLabel8.setText("8");
+
+        jLabel9.setText("9");
+
+        jLabel10.setText("10");
+
+        jLabel11.setText("11");
+
+        jLabel12.setText("12");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setFocusable(false);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(169, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(155, 155, 155))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(Pad7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel7)
+                                    .addGap(63, 63, 63)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Pad8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel8))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel9)
+                                .addComponent(Pad9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Pad10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel10))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Pad11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel11))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel12)
+                                .addComponent(Pad12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Pad1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(98, 98, 98)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Pad2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(Pad3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Pad4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Pad5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(Pad6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jButton1)
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Pad2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Pad3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Pad1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pad4, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pad5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pad6, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pad7, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pad8, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pad9, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pad10, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pad11, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pad12, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        play("kick");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void Pad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad1ActionPerformed
+        play("kick", "nil");
+    }//GEN-LAST:event_Pad1ActionPerformed
+
+    private void Pad2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad2ActionPerformed
+        play("clap", "nil");
+    }//GEN-LAST:event_Pad2ActionPerformed
+
+    private void Pad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad3ActionPerformed
+        play("3", "nil");
+    }//GEN-LAST:event_Pad3ActionPerformed
+
+    private void Pad4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad4ActionPerformed
+
+    private void Pad5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad5ActionPerformed
+
+    private void Pad6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad6ActionPerformed
+
+    private void Pad7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad7ActionPerformed
+
+    private void Pad8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad8ActionPerformed
+
+    private void Pad9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad9ActionPerformed
+
+    private void Pad10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad10ActionPerformed
+
+    private void Pad11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad11ActionPerformed
+
+    private void Pad12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pad12ActionPerformed
     
     
         
@@ -82,9 +355,13 @@ public class LaunchPadMain extends javax.swing.JFrame {
         @Override
         public void keyPressed(KeyEvent e) {
             int codigo = e.getKeyCode();
-            System.out.println(codigo);
+            String codigoString = Integer.toString(codigo);
             if (codigo == 49) {
-                play("kick");
+                play("kick", codigoString);
+            }if (codigo == 50) {
+                play("clap", codigoString);
+            }if (codigo == 51) {
+                play("hat", codigoString);
             }
         }
 
@@ -95,14 +372,15 @@ public class LaunchPadMain extends javax.swing.JFrame {
         
     }
     
-    public void play(String archivo){
+    public void play(String archivo, String codigo){
         try{
            clip = AudioSystem.getClip();
            clip.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream(ruta + archivo + ".wav"))); 
            clip.start();
         }catch (Exception e){
             
-        }   
+        }  
+        jTextArea1.setText("Sonido: " + archivo + "\nCodigo: " + codigo);
     }
         
    
@@ -110,7 +388,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        /* Set the Ni1mbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -144,6 +422,31 @@ public class LaunchPadMain extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Pad1;
+    private javax.swing.JButton Pad10;
+    private javax.swing.JButton Pad11;
+    private javax.swing.JButton Pad12;
+    private javax.swing.JButton Pad2;
+    private javax.swing.JButton Pad3;
+    private javax.swing.JButton Pad4;
+    private javax.swing.JButton Pad5;
+    private javax.swing.JButton Pad6;
+    private javax.swing.JButton Pad7;
+    private javax.swing.JButton Pad8;
+    private javax.swing.JButton Pad9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
