@@ -16,8 +16,10 @@ import javax.sound.sampled.Clip;
 public class LaunchPadMain extends javax.swing.JFrame {
 
     public Clip clip;
-    public String ruta = "Audio/Basic1/";
+
     
+    public static Librerias librerias = new Librerias();
+   
     public LaunchPadMain() {
         initComponents();
         Evento tecla = new Evento();
@@ -403,7 +405,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
     public void play(String archivo, String codigo){
         try{
            clip = AudioSystem.getClip();
-           clip.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream(ruta + archivo + ".wav"))); 
+           clip.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream(jTextField1.getText() + archivo + ".wav"))); 
            clip.start();
         }catch (Exception e){
             
@@ -477,6 +479,6 @@ public class LaunchPadMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

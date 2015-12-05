@@ -31,12 +31,11 @@ public class Librerias extends javax.swing.JFrame {
         listLibrerias = new javax.swing.JList();
         jButton1 = new javax.swing.JButton();
         libreriasCargar = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         listLibrerias.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Cumbia", "Electro", "Rap", "Dubstep", "Contry" };
+            String[] strings = { "Basic1", "Electro", "Rap", "Dubstep", "Contry" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -68,10 +67,7 @@ public class Librerias extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(libreriasCargar)
-                        .addGap(81, 81, 81)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(libreriasCargar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -81,14 +77,9 @@ public class Librerias extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(libreriasCargar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(libreriasCargar)
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         pack();
@@ -102,7 +93,7 @@ public class Librerias extends javax.swing.JFrame {
     private void libreriasCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_libreriasCargarActionPerformed
         String libSelect;
         libSelect = listLibrerias.getSelectedValue().toString();
-        jTextField1.setText(libSelect);
+        LaunchPadMain.jTextField1.setText("Audio/"+libSelect+"/");
     }//GEN-LAST:event_libreriasCargarActionPerformed
 
     /**
@@ -143,7 +134,6 @@ public class Librerias extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton libreriasCargar;
     private javax.swing.JList listLibrerias;
     // End of variables declaration//GEN-END:variables
