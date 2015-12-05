@@ -15,6 +15,8 @@ import javax.sound.sampled.Clip;
  */
 public class LaunchPadMain extends javax.swing.JFrame {
 
+   
+
     public Clip clip;
 
     
@@ -68,7 +70,9 @@ public class LaunchPadMain extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        Pad1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad1.setDefaultCapable(false);
         Pad1.setFocusable(false);
         Pad1.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +81,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad2.setFocusable(false);
         Pad2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +89,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad3.setFocusable(false);
         Pad3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +97,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad4.setFocusable(false);
         Pad4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +105,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad5.setFocusable(false);
         Pad5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +113,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad6.setFocusable(false);
         Pad6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +121,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad7.setFocusable(false);
         Pad7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +129,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad8.setFocusable(false);
         Pad8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +137,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad9.setFocusable(false);
         Pad9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +145,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad10.setFocusable(false);
         Pad10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +153,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad11.setFocusable(false);
         Pad11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,6 +161,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
             }
         });
 
+        Pad12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/pad_blue.9.png"))); // NOI18N
         Pad12.setFocusable(false);
         Pad12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +199,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
         jTextArea1.setForeground(new java.awt.Color(0, 204, 51));
         jTextArea1.setRows(5);
         jTextArea1.setFocusable(false);
+        jTextArea1.setMargin(new java.awt.Insets(5, 5, 5, 5));
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Librerias");
@@ -417,30 +433,6 @@ public class LaunchPadMain extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Ni1mbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LaunchPadMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LaunchPadMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LaunchPadMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LaunchPadMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LaunchPadMain().setVisible(true);
