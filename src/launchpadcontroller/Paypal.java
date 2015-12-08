@@ -6,6 +6,12 @@
 package launchpadcontroller;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 
 public class Paypal extends javax.swing.JFrame {
@@ -101,9 +107,35 @@ public class Paypal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    void acceder(String paypal){
+       String cap1="";
+       String cap2="";
+       
+       String sql="SELECT * FROM user WHERE pass_paypal_user= '"+ paypal + "'";
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                cap1=rs.getString("pass_paypal_user");
+                cap2=rs.getString("nombre_user");
+            }
+            
+            
+            if(cap1.equals(paypal)){
+                   
+                JOptionPane.showMessageDialog(this, "Esta a punto de pagar $2000 " + cap2 + ", presione aceptar para concretar la transacción ");
+            }/*
+            if((!cap1.equals("si")) && (!cap2.equals("no"))){
+                JOptionPane.showMessageDialog(this, "Ese usuario no existe :c");
+            }*/
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginAdmin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        String paypal = jTextField1.getText();
+        acceder(paypal);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

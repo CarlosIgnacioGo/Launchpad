@@ -5,8 +5,18 @@
  */
 package launchpadcontroller;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 public class LoginAdmin extends javax.swing.JFrame {
- 
+    ConexionBD con = new ConexionBD();
+    Connection cn = con.conexion();
+    
     public LoginAdmin() {
         initComponents();
     }
@@ -78,12 +88,48 @@ public class LoginAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if ("carlos".equals(jTextField1.getText()) && "123".equals(jTextField2.getText())){
+        /*if ("carlos".equals(jTextField1.getText()) && "123".equals(jTextField2.getText())){
             PanelAdmin librerias = new PanelAdmin();
             librerias.setVisible(true);
-        }
+        }*/
+        String usuario = jTextField1.getText();
+        String pass = jTextField2.getText();
+        acceder(usuario, pass);
     }//GEN-LAST:event_jButton1ActionPerformed
+    
+    void acceder(String usuario, String pass){
+       String cap="";
+       String sql="SELECT * FROM user WHERE nombre_user='"+usuario+"' && pass_user='"+pass+"'";
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                cap=rs.getString("user_admin");
+            }
+            if(cap.equals("si")){
+                  this.setVisible(false);
+                    JOptionPane.showMessageDialog(null, "Bienvenido " + usuario);
+                    LaunchPadMain LaunchPadMain = new LaunchPadMain();
+                    LaunchPadMain.setVisible(true); 
+                    PanelAdmin ingreso = new PanelAdmin();
+                    ingreso.setVisible(true); 
+                    
+            }
+            if(cap.equals("no")){
+                  this.setVisible(false);
+                    JOptionPane.showMessageDialog(null, "Bienvenido " + usuario);
+                    LaunchPadMain LaunchPadMain = new LaunchPadMain();
+                    LaunchPadMain.setVisible(true);           
+            }
 
+            if((!cap.equals("si")) && (!cap.equals("no"))){
+                JOptionPane.showMessageDialog(this, "Ese usuario no existe :c");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginAdmin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
