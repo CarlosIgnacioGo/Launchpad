@@ -24,7 +24,7 @@ public class PanelAdmin extends javax.swing.JFrame {
     ConexionBD con = new ConexionBD();
     Connection cn = con.conexion();
     String value = "";
-    
+    String premium = "";
     public PanelAdmin() {
         
         initComponents();
@@ -46,12 +46,13 @@ public class PanelAdmin extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jTextField5 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox();
+        jLabel5 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,13 +93,6 @@ public class PanelAdmin extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton2.setText("Mostrar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setText("Modificar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +122,10 @@ public class PanelAdmin extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "no", "si" }));
 
+        jLabel5.setText("Premium?");
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "no", "si" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -135,15 +133,17 @@ public class PanelAdmin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
                     .addComponent(jTextField2)
                     .addComponent(jTextField3)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel5)
+                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,9 +158,7 @@ public class PanelAdmin extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4)
-                            .addComponent(jButton2))
+                        .addComponent(jButton4)
                         .addGap(207, 207, 207))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -170,15 +168,10 @@ public class PanelAdmin extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(jButton2)))
+                .addGap(46, 46, 46)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -201,15 +194,18 @@ public class PanelAdmin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)))
-                .addGap(6, 6, 6)
+                        .addComponent(jLabel5)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 33, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -226,12 +222,14 @@ public class PanelAdmin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         value = jComboBox1.getSelectedItem().toString();
+        premium = jComboBox2.getSelectedItem().toString();
         try {
-            PreparedStatement pps = cn.prepareStatement("INSERT INTO user (nombre_user,pass_user,pass_paypal_user,user_admin) VALUES (?,?,?,?)");
+            PreparedStatement pps = cn.prepareStatement("INSERT INTO user (nombre_user,pass_user,pass_paypal_user,user_admin,premium_user) VALUES (?,?,?,?,?)");
             pps.setString(1, jTextField1.getText());
             pps.setString(2, jTextField2.getText());
             pps.setString(3, jTextField3.getText());
             pps.setString(4, value);
+            pps.setString(5, premium);
             
             pps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos Guardados");
@@ -248,11 +246,12 @@ public class PanelAdmin extends javax.swing.JFrame {
         modelo.addColumn("Pass");
         modelo.addColumn("Paypal");
         modelo.addColumn("Admin");
+        modelo.addColumn("Premium");
         jTable1.setModel(modelo);
         
         String sql = "SELECT * FROM user";
         
-        String datos[] = new String [5];   
+        String datos[] = new String [6];   
         Statement st;
         try {
             st = cn.createStatement();
@@ -263,6 +262,7 @@ public class PanelAdmin extends javax.swing.JFrame {
                 datos[2] = rs.getString(3);
                 datos[3] = rs.getString(4);
                 datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
                 modelo.addRow(datos);
             }
             jTable1.setModel(modelo);
@@ -270,36 +270,6 @@ public class PanelAdmin extends javax.swing.JFrame {
             Logger.getLogger(PanelAdmin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        DefaultTableModel modelo = new DefaultTableModel();
-        modelo.addColumn("Id");
-        modelo.addColumn("Nombre");
-        modelo.addColumn("Pass");
-        modelo.addColumn("Paypal");
-        modelo.addColumn("Admin");
-        jTable1.setModel(modelo);
-        
-        String sql = "SELECT * FROM user";
-        
-        String datos[] = new String [5];   
-        Statement st;
-        try {
-            st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            while(rs.next()){
-                datos[0] = rs.getString(1);
-                datos[1] = rs.getString(2);
-                datos[2] = rs.getString(3);
-                datos[3] = rs.getString(4);
-                datos[4] = rs.getString(5);
-                modelo.addRow(datos);
-            }
-            jTable1.setModel(modelo);
-        } catch (SQLException ex) {
-            Logger.getLogger(PanelAdmin.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         int fila =  jTable1.getSelectedRow();
         if(fila>=0){
@@ -307,6 +277,7 @@ public class PanelAdmin extends javax.swing.JFrame {
             jTextField2.setText(jTable1.getValueAt(fila, 2).toString());
             jTextField3.setText(jTable1.getValueAt(fila, 3).toString());
             jComboBox1.setSelectedItem(jTable1.getValueAt(fila, 4).toString());
+            jComboBox2.setSelectedItem(jTable1.getValueAt(fila, 5).toString());
             jTextField5.setText(jTable1.getValueAt(fila, 0).toString());
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -329,11 +300,13 @@ public class PanelAdmin extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         value = jComboBox1.getSelectedItem().toString();
+        premium = jComboBox2.getSelectedItem().toString();
         try {
-            PreparedStatement pps = cn.prepareStatement("UPDATE user SET nombre_user='" + jTextField1.getText() + "',pass_user='" + jTextField2.getText() + "',pass_paypal_user='" + jTextField3.getText() +  "',user_admin='" + value + "' WHERE id_user=" + jTextField5.getText());
+            PreparedStatement pps = cn.prepareStatement("UPDATE user SET nombre_user='" + jTextField1.getText() + "',pass_user='" + jTextField2.getText() + "',pass_paypal_user='" + jTextField3.getText() +  "',user_admin='" + value +  "',premium_user='" + premium + "' WHERE id_user=" + jTextField5.getText());
 
             pps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos actualizados");
+            mostrar();
         } catch (SQLException ex) {
             Logger.getLogger(PanelAdmin.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -381,15 +354,16 @@ public class PanelAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;

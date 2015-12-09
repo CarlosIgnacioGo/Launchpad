@@ -7,8 +7,14 @@ package launchpadcontroller;
 
 import java.awt.event.*;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,8 +28,9 @@ public class LaunchPadMain extends javax.swing.JFrame {
 
     
     public static Librerias librerias = new Librerias();
-    
-   
+    ConexionBD con = new ConexionBD();
+    Connection cn = con.conexion();
+
     public LaunchPadMain() {
         initComponents();
         Evento tecla = new Evento();
@@ -212,6 +219,11 @@ public class LaunchPadMain extends javax.swing.JFrame {
         });
 
         jTextField1.setFocusable(false);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -345,7 +357,7 @@ public class LaunchPadMain extends javax.swing.JFrame {
     }//GEN-LAST:event_Pad2ActionPerformed
 
     private void Pad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad3ActionPerformed
-        play("3", "nil");
+        play("hat", "nil");
     }//GEN-LAST:event_Pad3ActionPerformed
 
     private void Pad4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pad4ActionPerformed
@@ -389,6 +401,11 @@ public class LaunchPadMain extends javax.swing.JFrame {
         librerias.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
     
+   
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+    
     
         
     class Evento implements KeyListener{
@@ -403,11 +420,23 @@ public class LaunchPadMain extends javax.swing.JFrame {
             int codigo = e.getKeyCode();
             String codigoString = Integer.toString(codigo);
             if (codigo == 49) {
-                play("kick", codigoString);
+                play("1", codigoString);
             }if (codigo == 50) {
-                play("clap", codigoString);
+                play("2", codigoString);
             }if (codigo == 51) {
-                play("hat", codigoString);
+                play("3", codigoString);
+            }if (codigo == 52) {
+                play("4", codigoString);
+            }if (codigo == 53) {
+                play("5", codigoString);
+            }if (codigo == 54) {
+                play("6", codigoString);
+            }if (codigo == 55) {
+                play("7", codigoString);
+            }if (codigo == 56) {
+                play("8", codigoString);
+            }if (codigo == 57) {
+                play("9", codigoString);
             }
         }
 

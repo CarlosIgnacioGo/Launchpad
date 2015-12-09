@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class LoginAdmin extends javax.swing.JFrame {
     ConexionBD con = new ConexionBD();
     Connection cn = con.conexion();
-    
+    String cap2="";
     public LoginAdmin() {
         initComponents();
     }
@@ -102,12 +102,14 @@ public class LoginAdmin extends javax.swing.JFrame {
     
     void acceder(String usuario, String pass){
        String cap="";
+       String cap2="";
        String sql="SELECT * FROM user WHERE nombre_user='"+usuario+"' && pass_user='"+pass+"'";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 cap=rs.getString("user_admin");
+                cap2=rs.getString("premium_user");
             }
             if(cap.equals("si")){
                   this.setVisible(false);
@@ -133,12 +135,18 @@ public class LoginAdmin extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Ese usuario no existe :c");
                 LoginAdmin loginAdmin = new LoginAdmin();
                 loginAdmin.setVisible(false);
+            }            
+            if(cap2.equals("si")){
+                  this.setVisible(false);
+                    LibreriasPremium LaunchPadMain = new LibreriasPremium();
+                    LaunchPadMain.setVisible(true);                     
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(LoginAdmin.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            } catch (SQLException ex) {
+                Logger.getLogger(LoginAdmin.class.getName()).log(Level.SEVERE, null, ex);
+            }
        
         }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -175,7 +183,7 @@ public class LoginAdmin extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JPasswordField jPasswordField1;
+    public static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
