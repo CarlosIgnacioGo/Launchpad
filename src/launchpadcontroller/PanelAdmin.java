@@ -230,15 +230,28 @@ public class PanelAdmin extends javax.swing.JFrame {
             pps.setString(3, jTextField3.getText());
             pps.setString(4, value);
             pps.setString(5, premium);
+            if("".equals(jTextField1.getText())){
+                JOptionPane.showMessageDialog(null, "El campo nombre esta vacios :c");
+            }if ("".equals(jTextField2.getText())) {
+                JOptionPane.showMessageDialog(null, "El campo pass vacios :c");
+            }if ("".equals(jTextField3.getText())) {
+                JOptionPane.showMessageDialog(null, "El campo paypal vacios :c");
+            }  else{
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Datos Guardados");
+            }
             
-            pps.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Datos Guardados");
             mostrar();
+            limpiar();
         } catch (SQLException ex) {
             Logger.getLogger(PanelAdmin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+    void limpiar(){
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+    }
     void mostrar(){
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("Id");
@@ -268,6 +281,22 @@ public class PanelAdmin extends javax.swing.JFrame {
             jTable1.setModel(modelo);
         } catch (SQLException ex) {
             Logger.getLogger(PanelAdmin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }
+    
+    void validar(){
+        if ("".equals(jTextField1.getText())) {
+            JOptionPane.showMessageDialog(null, "El campo nombre esta vacio");
+        }
+        
+        if ("".equals(jTextField1.getText())) {
+            JOptionPane.showMessageDialog(null, "El campo pass esta vacio");
+        }
+        
+        if ("".equals(jTextField1.getText())) {
+            JOptionPane.showMessageDialog(null, "El campo paypal esta vacio");
         }
     }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -307,6 +336,7 @@ public class PanelAdmin extends javax.swing.JFrame {
             pps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos actualizados");
             mostrar();
+            limpiar();
         } catch (SQLException ex) {
             Logger.getLogger(PanelAdmin.class.getName()).log(Level.SEVERE, null, ex);
         }

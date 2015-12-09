@@ -47,7 +47,7 @@ public class LibreriasPremium extends javax.swing.JFrame {
         jScrollPane1.setViewportView(listLibrerias);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(6, 17, 320, 104);
+        jScrollPane1.setBounds(30, 60, 320, 104);
 
         jButton1.setText("Cargar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +56,7 @@ public class LibreriasPremium extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(6, 150, 67, 27);
+        jButton1.setBounds(10, 210, 67, 27);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launchpadcontroller/Img/dinero_6.jpg"))); // NOI18N
         getContentPane().add(jLabel1);

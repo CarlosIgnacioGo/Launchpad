@@ -6,6 +6,7 @@
 package launchpadcontroller;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -123,28 +124,47 @@ public class Paypal extends javax.swing.JFrame {
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 cap1=rs.getString("pass_paypal_user");
-                cap2=rs.getString("nombre_user");
+                cap2=rs.getString("premium_user");
             }
-            
-            
-            if(cap1.equals(paypal)){
-                   
+                if(cap1.equals(paypal)){
+                  
                 JOptionPane.showMessageDialog(this, "Esta a punto de pagar $2000 , presione aceptar para concretar la transacción ");
-            }/*
+                
+                
+                try {
+                    PreparedStatement pps = cn.prepareStatement("UPDATE user SET premium_user='si' WHERE pass_paypal_user= '"+ paypal + "'");
+            
+                    pps.executeUpdate();
+                } catch (SQLException ex) {
+                    Logger.getLogger(PanelAdmin.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        
+            
+            
+            /*
             if((!cap1.equals("si")) && (!cap2.equals("no"))){
                 JOptionPane.showMessageDialog(this, "Ese usuario no existe :c");
             }*/
         } catch (SQLException ex) {
             Logger.getLogger(LoginAdmin.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
        
         }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         char [] paypalIncryp = jPasswordField1.getPassword();
         String paypal = new String(paypalIncryp);
+        if ("".equals(paypal)) {
+            JOptionPane.showMessageDialog(this, "La casilla para la clave esta vacia");
+        }else{
+           acceder(paypal); 
+           Paypal pay = new Paypal();
+           pay.setVisible(false);
+        }
         
-        acceder(paypal);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
